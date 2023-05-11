@@ -10,7 +10,9 @@ app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///users.db'
 db = SQLAlchemy(app)
 
 
-heart_model = pickle.load(open('heart_disease_model.pkl','rb'))
+heart_model = pickle.load(open('model/heart_disease_model.pkl','rb'))
+
+
 
 class User(db.Model):
     id = db.Column(db.Integer, primary_key=True)
