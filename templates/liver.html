@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <center>
+        <h1>Liver Disease Predictor</h1>
+    </center>
+
+    <form action="{{ url_for('predictPage_liver') }}" method="POST">
+
+        <input type="text" name="Age" placeholder="Age">
+
+        <input type="text" name="Total_Bilirubin"
+            placeholder="Total Bilirubin">
+
+        <input type="text" name="Direct_Bilirubin"
+            placeholder="Direct Bilirubin">
+
+        <input type="text" name="Alkaline_Phosphotase"
+            placeholder="Alkaline Phosphotase">
+
+        <input type="text" name="Alamine_Aminotransferase"
+            placeholder="Alamine Aminotransferase">
+
+        <input type="text" name="Aspartate_Aminotransferase"
+            placeholder="Aspartate Aminotransferase">
+
+        <input type="text" name="Total_Protiens"
+            placeholder="Total Protiens">
+
+        <input type="text" name="Albumin" placeholder="Albumin">
+
+        <input type="text" name="Albumin_and_Globulin_Ratio"
+            placeholder="Albumin and Globulin Ratio">
+
+        <input type="text" name="Gender_Male"
+            placeholder="Gender(Male: 1, Female: 0)">
+
+        <input type="submit" value="Predict">
+    </form>
+
+    
+
+</body>
+
+</html>
