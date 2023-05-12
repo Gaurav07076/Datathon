@@ -14,15 +14,47 @@
 
     <title>Login Page</title>
     <style>
+      :root{
+    --mainred: #DA1212;
+    --mainblue: #041562; 
+    --maindgreen:#40a879;
+    --maingreen:#50CB93;
+    --bg-black: #232b2b;
+
+    --bg-light :#DCE1DE;
+    --fontcolor:rgb(240, 239, 238);
+    --fontcolordark: #1F2421;
+}
       body{
+        font-family: 'Montserrat', sans-serif;
         height:100vh;
         overflow: hidden;
-
+        background:#DCE1DE;
       }
       .image{
        
         margin-top:80px;
         margin-right: 150px;
+      }
+      input[type="submit"]:hover{
+        transition: all 0.5s ease-in-out;
+        scale: 1.02;
+        background-color: var( --maindgreen);
+        border:2px solid var(--maingreen);
+      }
+    
+      input[type="submit"]{
+        background:var( --maingreen);
+        transition: all 0.5s ease-in-out;
+        width: 100%; 
+        height: 48px;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        font-weight: 500;
+        color: #fbfcfb;
+        font-size: 19px; 
+        margin-bottom: 5px;
       }
     </style>
   </head>
@@ -33,14 +65,32 @@
 
     <div class="container">
         <div class="row">
-           
-            <div class="col-md-7">
-                <h1 class="text-dark mt-100" style="font-size:80px">Welcome to
-                   <span >MedAware</span>
-                </h1>
-                <h3 class="text-dark ">Towards a healthier living</h3>
-                <div class="image"><img src="{{url_for('static',filename='../static/resources/cu.svg')}}"" alt=""></div>
-            </div>
+          <div class="col-md-7">
+                 
+            <h1 class="mt-100" 
+              style="font-size:80px;
+                    font-weight:400;
+                    color:#1F2421;"
+            >
+            Welcome to 
+            <span style="
+                    font-size:80px;
+                    font-weight:700;
+                    color: #40a879;
+                    font-style: italic;"
+            > Heart-Static
+            </span>
+          </h1>
+          <h3 style="
+                font-size:35px;
+                font-weight:400;
+                color:#1F2421;
+                "
+          >
+            Towards a healthier living
+          </h3>
+          <div class="image"><img src="{{url_for('static',filename='../static/resources/loginimg.svg')}}"" alt=""></div>
+      </div>
             <div class="col-md-5">
                 <div class="card mt-100">
                     <div class="card-body">
@@ -49,9 +99,9 @@
                             <input type="email" class="form-control" name="username"><br>
                             <label for="">Password</label><br>
                             <input type="password" class="form-control" name="password"><br><br>
-                            <input type="submit" class="btn btn-danger btn-block btn-lg" value="Login">
+                            <input type="submit" value="Login">
                         </form>
-                        <p>Not a member? <a href="/register" class="text-danger">Create account</a></p>
+                        <p>Not a member? <a href="/register" style="color:#50CB93;">Create account</a></p>
 
                     </div>
                 </div>
