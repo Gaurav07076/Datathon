@@ -86,7 +86,7 @@
             image: base64Image
         }
         console.log(message);
-        $.post("./predict", JSON.stringify(message), function (response) {
+        $.post("./predict_covid", JSON.stringify(message), function (response) {
             $("#result").text(response.prediction.result);
 
             console.log(response);
