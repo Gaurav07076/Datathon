@@ -13,40 +13,105 @@
         <h1>Liver Disease Predictor</h1>
     </center>
 
-    <form action="{{ url_for('predictPage_liver') }}" method="POST">
+    <div class="formcontainer" id="predict">
+        <div class="headerline">Predict your heart condition </div>
+        <div class="divider_thick up10 "></div>
 
-        <input type="text" name="Age" placeholder="Age">
+        <form action="{{ url_for('predictPage_liver') }}" method="POST">
 
-        <input type="text" name="Total_Bilirubin"
-            placeholder="Total Bilirubin">
 
-        <input type="text" name="Direct_Bilirubin"
-            placeholder="Direct Bilirubin">
+            <div class="form_main_subcontainer">
+                <div class="formsubcontainer">
 
-        <input type="text" name="Alkaline_Phosphotase"
-            placeholder="Alkaline Phosphotase">
+                    <div class="seperator">
+                        <label for="age">Age</label>
+                        <input type="text" id="age" name="age" placeholder="Your age..">
+                    </div>
+                    <div class="formseperator"></div>
 
-        <input type="text" name="Alamine_Aminotransferase"
+                    <div class="seperator">
+                        <label for="gender">Gender</label>
+                        <select id="sex" name="sex">
+                            <option selected>----select option----</option>
+                            <option value="1">Male</option>
+                            <option value="0">Female</option>
+                          </select>
+                    </div>
+                    <div class="formseperator"></div>
+
+                    <div class="labelspacing">
+                        <label for="tb">Total Bilirubin</label>
+                        <input type="text" name="Total_Bilirubin" placeholder="Total Bilirubin">
+                    </div>
+                    <div class="formseperator"></div>
+
+                    <div class="labelspacing">
+                        <label for="db">Direct Bilirubin</label>
+                        <input type="text" name="Direct_Bilirubin" placeholder="Direct Bilirubin">
+                    </div>
+                    <div class="formseperator"></div>
+
+                    <div class="seperator">
+                        <label for="ap">Alkaline Phosphotase</label>
+                        <input type="text" name="Alkaline_Phosphotase" placeholder="Alkaline Phosphotase">
+                    </div>
+                    <div class="formseperator"></div>
+
+                    <div class="seperator">
+                        <label for="aa">Alamine Aminotransferase</label>
+                        <input type="text" name="Alamine_Aminotransferase"
             placeholder="Alamine Aminotransferase">
+                    </div>
+                    <div class="formseperator"></div>
 
-        <input type="text" name="Aspartate_Aminotransferase"
+                    <div class="labelspacing">
+                        <label for="asa">Aspartate_Aminotransferase</label>
+                        <input type="text" name="Aspartate_Aminotransferase"
             placeholder="Aspartate Aminotransferase">
-
-        <input type="text" name="Total_Protiens"
+                    </div>
+                    <div class="formseperator"></div>
+                    <div class="labelspacing">
+                        <label for="tp">Total proteins</br>
+                            <input type="text" name="Total_Protiens"
             placeholder="Total Protiens">
+                    </div>
+                    <div class="formseperator"></div>
 
-        <input type="text" name="Albumin" placeholder="Albumin">
 
-        <input type="text" name="Albumin_and_Globulin_Ratio"
+                </div>
+                <div class="formsubcontainer">
+
+                    <div class="seperator">
+                        <label for="albumin">Albumin</label>
+                        <input type="text" name="Albumin" placeholder="Albumin">
+                    </div>
+                    <div class="formseperator"></div>
+
+                    <div class="labelspacing">
+                        <label for="agr">Albumin and Globulin Ratio</label>
+                        <input type="text" name="Albumin_and_Globulin_Ratio"
             placeholder="Albumin and Globulin Ratio">
+                    </div>
+                    <div class="formseperator"></div>
 
-        <input type="text" name="Gender_Male"
-            placeholder="Gender(Male: 1, Female: 0)">
-
-        <input type="submit" value="Predict">
-    </form>
+                    
 
     
+
+                </div>
+                <div class="formimage">
+                    <img src="{{url_for('static',filename='../static/resources/Doctors-pana.svg')}}">
+                </div>
+
+            </div>
+            <input type="submit" class="btn btn-info btn-block button" value="Predict">
+        </form>
+
+    </div>
+
+
+
+
 
 </body>
 

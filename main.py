@@ -2,6 +2,8 @@ import numpy as np
 import pickle
 from flask import Flask, url_for, render_template, request, redirect, session
 from flask_sqlalchemy import SQLAlchemy
+import tensorflow as tf
+
 
 
 
@@ -11,8 +13,6 @@ db = SQLAlchemy(app)
 
 
 heart_model = pickle.load(open('model/heart_disease_model.pkl','rb'))
-
-
 
 class User(db.Model):
     id = db.Column(db.Integer, primary_key=True)
@@ -24,9 +24,9 @@ class User(db.Model):
         self.password = password
 
 
-def predict(values,dic):
+def predict(model,values,dic):
     values = np.asarray(values)
-    return heart_model.predict(values.reshape(1, -1))[0]
+    return model.predict(values.reshape(1, -1))[0]
 
 #url
 @app.route('/', methods=['GET', 'POST'])
@@ -79,7 +79,7 @@ def predictPage_heart():
         if request.method == 'POST':
             to_predict_dict = request.form.to_dict()
             to_predict_list = list(map(float, list(to_predict_dict.values())))
-            pred = predict(to_predict_list, to_predict_dict)
+            pred = predict(heart_model,to_predict_list, to_predict_dict)
     except:
         message = "Please enter valid Data"
         return render_template("heart.html", message = message)
