@@ -82,6 +82,10 @@ def liver():
 def covid():
 	return(render_template("covid.html"))
 
+@app.route('/main/diabetes')
+def diabetes():
+    return render_template("diabetes.html")
+
 @app.route('/register/', methods=['GET', 'POST'])
 def register():
     if request.method == 'POST':
