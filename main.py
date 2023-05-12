@@ -19,6 +19,8 @@ db = SQLAlchemy(app)
 heart_model = pickle.load(open('model/heart_disease_model.pkl','rb'))
 covid_model = load_model('model/covid.model')
 liver_model = pickle.load(open('model/liver_model.pkl','rb'))
+asd_model = pickle.load(open('model/asd_model.pkl','rb'))
+diabetes_model = pickle.load(open('model/diabetes_model.pkl','rb'))
 
 label_dict={0:'Covid19 Negative', 1:'Covid19 Positive'}
 img_size = 100
@@ -87,6 +89,10 @@ def covid():
 def diabetes():
 	return(render_template("diabetes.html"))
 
+@app.route("/ASD")
+def ASD():
+	return(render_template("ASD.html"))
+
 @app.route('/register/', methods=['GET', 'POST'])
 def register():
     if request.method == 'POST':
@@ -133,6 +139,32 @@ def predictPage_liver():
         return render_template("liver.html", message = message)
 
     return render_template('predict_liver.html', pred = pred)
+
+@app.route("/predict_ASD",methods= ['POST', 'GET'])
+def predictPage_ASD():
+    try:
+        if request.method == 'POST':
+            to_predict_dict = request.form.to_dict()
+            to_predict_list = list(map(float, list(to_predict_dict.values())))
+            pred = predict(asd_model,to_predict_list, to_predict_dict)
+    except:
+        message = "Please enter valid Data"
+        return render_template("ASD.html", message = message)
+
+    return render_template('predict_ASD.html', pred = pred)
+
+@app.route("/predict_diabetes",methods= ['POST', 'GET'])
+def predictPage_diabetes():
+    try:
+        if request.method == 'POST':
+            to_predict_dict = request.form.to_dict()
+            to_predict_list = list(map(float, list(to_predict_dict.values())))
+            pred = predict(diabetes_model,to_predict_list, to_predict_dict)
+    except:
+        message = "Please enter valid Data"
+        return render_template("diabetes.html", message = message)
+
+    return render_template('predict_diabetes.html', pred = pred)
 
 @app.route("/predict_covid", methods=["POST"])
 def predict_covid():
