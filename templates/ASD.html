@@ -117,7 +117,14 @@
           <option value="0">No</option>
         </select>
       </div>
-      <label for="">gender</label><br><input type="text" name="Age" placeholder="Age">
+      <div class="labelspacing">
+        <label for="gender">Gender</label>
+        <select id="gender" name="gender">
+          <option selected>----select option----</option>
+          <option value="1">Male</option>
+          <option value="0">Female</option>
+        </select>
+      </div>
 
       
 
@@ -130,13 +137,15 @@
         </select>
       </div>
       <div class="labelspacing">
-        <label for="austim">Family member with ASD:</label>
+        <label for="austim">Austim:</label>
         <select id="austim" name="austim">
           <option selected>----select option----</option>
           <option value="1">Yes</option>
           <option value="0">No</option>
         </select>
       </div>
+      
+      
       <input type="submit" value="Predict">
     </form>
   </div>

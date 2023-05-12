@@ -146,6 +146,7 @@ def predictPage_ASD():
         if request.method == 'POST':
             to_predict_dict = request.form.to_dict()
             to_predict_list = list(map(float, list(to_predict_dict.values())))
+            print(to_predict_list)
             pred = predict(asd_model,to_predict_list, to_predict_dict)
     except:
         message = "Please enter valid Data"
