@@ -133,7 +133,7 @@ nav.sticky{
 .headerline{
     font-size: 45px;
     font-weight:800; 
-    color:  var(--fontcolor);
+    color:  var(--fontcolordark);
     width: 95%;
 
 }
