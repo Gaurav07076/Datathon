@@ -70,19 +70,19 @@ def login():
 def main():
     return render_template("main.html")
 
-@app.route('/main/heart_disease')
+@app.route('/heart_disease')
 def heart():
     return render_template("heart.html")
 
-@app.route('/main/liver_disese')
+@app.route('/liver_disese')
 def liver():
     return render_template("liver.html")
 
-@app.route("/main/covid")
+@app.route("/covid")
 def covid():
 	return(render_template("covid.html"))
 
-@app.route('/register/', methods=['GET', 'POST'])
+@app.route('/register', methods=['GET', 'POST'])
 def register():
     if request.method == 'POST':
         try:
@@ -103,7 +103,7 @@ def register():
     else:
         return render_template('register.html')
     
-@app.route("/main/heart_disease/predict_heart",methods= ['POST', 'GET'])
+@app.route("/predict_heart",methods= ['POST', 'GET'])
 def predictPage_heart():
     try:
         if request.method == 'POST':
@@ -116,7 +116,7 @@ def predictPage_heart():
 
     return render_template('predict_heart.html', pred = pred)
 
-@app.route("/main/liver_disease/predict_liver",methods= ['POST', 'GET'])
+@app.route("/predict_liver",methods= ['POST', 'GET'])
 def predictPage_liver():
     try:
         if request.method == 'POST':
@@ -129,7 +129,7 @@ def predictPage_liver():
 
     return render_template('predict_liver.html', pred = pred)
 
-@app.route("/main/covid/predict_covid", methods=["POST"])
+@app.route("/predict_covid", methods=["POST"])
 def predict():
 	print('HERE')
 	message = request.get_json(force=True)
@@ -158,7 +158,7 @@ def logout():
     session['logged_in'] = False
     return redirect(url_for('login'))
 
-@app.route('/main/aboutus')
+@app.route('/aboutus')
 def aboutus():
     return render_template("aboutus.html")
 
