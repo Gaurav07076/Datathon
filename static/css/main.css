@@ -131,7 +131,7 @@ nav.sticky{
 .headerline{
     font-size: 45px;
     font-weight:800; 
-    color:  var(--fontcolor);
+    color:  var(--fontcolordark);
     width: 95%;
 
 }
@@ -627,6 +627,7 @@ to other pages section
     font-weight:600;
     
     transition: all 0.6s ease-in-out;
+    z-index: 1;
    
 }
 .buttonColour a{
