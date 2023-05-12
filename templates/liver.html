@@ -4,17 +4,36 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="{{url_for('static',filename='../static/css/liver.css')}}">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <title>Document</title>
 </head>
 
 <body>
-    <center>
-        <h1>Liver Disease Predictor</h1>
-    </center>
+    <nav>
+        <div class="navElemContainers flexlogo">
+            <img src="{{url_for('static',filename='../static/resources/heart.png')}}">
+            <div class="logo">MedAware</div>
+        </div>
+        <div class="navElemContainers middlenav">
+            <div class="navItem"><a href="{{url_for('main')}}">Home</a></div>
+            <div class="navItem"><a href="#blog">Blogs</a></div>
+            <div class="navItem"><a href="{{url_for('aboutus')}}">About Us</a></div>
+
+        </div>
+        <div class="navElemContainers">
+            <div class="button"><a href="{{url_for('logout')}}">Log Out</a></div>
+        </div>
+    </nav>
 
     <div class="formcontainer" id="predict">
-        <div class="headerline">Predict your heart condition </div>
+        <div class="headerline">Liver Condition Detector</div>
         <div class="divider_thick up10 "></div>
 
         <form action="{{ url_for('predictPage_liver') }}" method="POST">
@@ -35,7 +54,7 @@
                             <option selected>----select option----</option>
                             <option value="1">Male</option>
                             <option value="0">Female</option>
-                          </select>
+                        </select>
                     </div>
                     <div class="formseperator"></div>
 
@@ -59,21 +78,18 @@
 
                     <div class="seperator">
                         <label for="aa">Alamine Aminotransferase</label>
-                        <input type="text" name="Alamine_Aminotransferase"
-            placeholder="Alamine Aminotransferase">
+                        <input type="text" name="Alamine_Aminotransferase" placeholder="Alamine Aminotransferase">
                     </div>
                     <div class="formseperator"></div>
 
                     <div class="labelspacing">
                         <label for="asa">Aspartate_Aminotransferase</label>
-                        <input type="text" name="Aspartate_Aminotransferase"
-            placeholder="Aspartate Aminotransferase">
+                        <input type="text" name="Aspartate_Aminotransferase" placeholder="Aspartate Aminotransferase">
                     </div>
                     <div class="formseperator"></div>
                     <div class="labelspacing">
                         <label for="tp">Total proteins</br>
-                            <input type="text" name="Total_Protiens"
-            placeholder="Total Protiens">
+                            <input type="text" name="Total_Protiens" placeholder="Total Protiens">
                     </div>
                     <div class="formseperator"></div>
 
@@ -89,14 +105,13 @@
 
                     <div class="labelspacing">
                         <label for="agr">Albumin and Globulin Ratio</label>
-                        <input type="text" name="Albumin_and_Globulin_Ratio"
-            placeholder="Albumin and Globulin Ratio">
+                        <input type="text" name="Albumin_and_Globulin_Ratio" placeholder="Albumin and Globulin Ratio">
                     </div>
                     <div class="formseperator"></div>
 
-                    
 
-    
+
+
 
                 </div>
                 <div class="formimage">
@@ -109,7 +124,30 @@
 
     </div>
 
+    <footer>
+        <div class="footer-content">
+            <h3>MedAware.co</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur recusandae totam perferendis accusamus
+                distinctio reiciendis accusantium beatae iure odio quisquam corporis deleniti tenetur ab ipsa,
+                voluptatibus sint rerum laboriosam, ea ipsum voluptatum! Neque nisi sed fugit unde temporibus quod
+                delectus.</p>
+        </div>
+        <div class="footer-bottom">
+            <p>copyright &copy;2023. designed by <span><a href="https://github.com/Gaurav07076">Gaurav,
+                    </a></span><span><a href="https://github.com/samyak269"> Samyak, </a></span><span><a
+                        href=https://github.com/VaishaliRajpal28>PRITHWI, </a></span><span><a
+                        href=https://github.com/VaishaliRajpal28>SAHIL &</a></span> <span><a
+                        href=https://github.com/VaishaliRajpal28>SHUBHAM</a></span></p>
+        </div>
 
+
+    </footer>
+    <script type="text/javascript">
+        window.addEventListener("scroll", function () {
+            var nav = document.querySelector("nav");
+            nav.classList.toggle("sticky", window.scrollY > 0);
+        }) 
+    </script>
 
 
 
