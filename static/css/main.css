@@ -70,7 +70,7 @@ nav{
 nav.sticky{
     padding: 5px 100px;
     opacity: 1;
-    background-color: var(--fontcolor);
+    background-color: var(--fontcolordark);
    
 }
 .logo{
@@ -592,7 +592,7 @@ to other pages section
     margin-top: 50px;
     width: 100%;
     display: flex;
-    justify-content: space-around;
+    justify-content:space-evenly;
 }
 
 .diseasecard{
@@ -600,7 +600,7 @@ to other pages section
     flex-direction: column;
     align-items: flex-start;
     height:450px;
-   
+    padding: 0 30px;
     width: 500px;
     margin: 10px;
     
@@ -621,7 +621,7 @@ to other pages section
     padding:10px 15px ;
     border:2px solid var(--fontcolordark);
     border-radius: 4px;
-    max-width: 155px;
+    max-width: 250px;
     margin-top: 20px;
     font-size: 17px;
     font-weight:600;
@@ -655,6 +655,9 @@ to other pages section
 .brown{
     background-color:#b08968;
 }
+.blue{
+    background-color:#0768b7;
+}
 .dividergradient{
     width: 100%;
     height:20px;
@@ -674,5 +677,13 @@ to other pages section
 	100% {
 		background-position: 0% 50%;
 	}
+}
+
+.blackdivider{
+
+    width:2px;
+    border-radius: 1px;
+    height: 400px;
+    background: var(--fontcolordark);
 }
 
