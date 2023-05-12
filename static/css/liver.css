@@ -5,7 +5,7 @@
     --maindgreen:#40a879;
     --maingreen:#50CB93;
     --bg-black: #232b2b;
-
+    --mainbrown:#b08968;
     --bg-light :#DCE1DE;
     --fontcolor:rgb(240, 239, 238);
     --fontcolordark: #1F2421;
@@ -133,7 +133,7 @@ nav.sticky{
 .headerline{
     font-size: 45px;
     font-weight:800; 
-    color:  var(--fontcolor);
+    color:  var(--fontcolordark);
     width: 95%;
 
 }
@@ -216,7 +216,6 @@ nav.sticky{
 
 
 .formcontainer{
-     height: 170vh;
      padding-left: 70px;
      margin-top: 200px;
 }
@@ -245,7 +244,7 @@ form{
 }
 .formseperator{
     width: 250px;
-    height: 1px;
+    height: 2px;
     background:var(--mainred);
     margin: 5px 0 20px 0;
 
@@ -377,4 +376,9 @@ footer{
 .headDescription ol div{
     font-size:15px;
     font-weight: 400;
+}
+
+.brown{
+    background-color: var(--mainbrown) !important;
+    color: var(--bg-light) !important;
 }
