@@ -2,8 +2,13 @@
 :root{
     --mainred: #DA1212;
     --mainblue: #041562; 
+    --maindgreen:#40a879;
+    --maingreen:#50CB93;
     --bg-black: #232b2b;
+
+    --bg-light :#DCE1DE;
     --fontcolor:rgb(240, 239, 238);
+    --fontcolordark: #1F2421;
 }
 *{
     margin: 0;
@@ -12,15 +17,16 @@
     font-family: 'Montserrat', sans-serif;
 }
 body{
-    background-color: var(--bg-black);
+    background-color: var(--bg-light);
     height: 100vh;
 }
 a{
-    text-decoration: none;color: #a0a0a0;
+    text-decoration: none;
+    color: #a0a0a0;
     cursor: pointer;
 }
 a:hover{
-    color:var(--mainred)
+    color:var( --maingreen)
 }
 .navElemContainers + .middlenav{
     display:flex;
@@ -29,7 +35,7 @@ a:hover{
     font-size: 20px;
     align-items: center;
     justify-content: space-between;
-    color:  var(--fontcolor);
+    color:  var(--fontcolordark);
 }
 .navElemContainers img{
     z-index: 1;
@@ -73,7 +79,7 @@ nav.sticky{
     font-size: 28px;
     font-weight:900;
     font-style: italic;
-    color:  var(--mainred);
+    color:  var( --maingreen);
 }
 
 
@@ -89,7 +95,7 @@ nav.sticky{
 .navItem:after{
     content: " ";
     position:absolute;
-    background-color: var(--mainred);
+    background-color: var( --maingreen);
     height: 3px;
     width: 0;
     left:0;
@@ -132,7 +138,7 @@ nav.sticky{
 .headerline > span:nth-child(1){
     font-style: italic;
     text-shadow: 2px 2px 70px #4b4d4d;
-    background: -webkit-linear-gradient(0.30turn,var(--mainred), #c04848);
+    background: -webkit-linear-gradient(0.30turn,var( --maingreen), #207284);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
@@ -148,7 +154,7 @@ nav.sticky{
     font-size: 20px;
     width: 85%;
     font-weight:500;
-    color:  var(--fontcolor);
+    color:  var(--fontcolordark);
     line-height: 30px;
 }
 .divider_thick{
@@ -156,7 +162,7 @@ nav.sticky{
     height:10px;
     border:0.5px solid white;
     border-radius: 4px;
-    background: linear-gradient(0.25turn,var(--mainred), var(--mainblue));
+    background: linear-gradient(0.25turn,var( --maingreen), #207284);
     animation: pulse 5s infinite;
     animation-timing-function: ease-out; 
     animation-delay: 0s;
@@ -178,15 +184,13 @@ nav.sticky{
 .button{
     display: flex;
     align-items: center;
-    
     padding:10px 15px ;
-    border:1px solid white;
+    border:1px solid var(--fontcolordark);
     border-radius: 4px;
-    /* background: linear-gradient(0.25turn,var(--mainred), var(--mainblue)); */
-    background-color: var(--mainred);
+    background-color: var( --maingreen);
     max-width: 155px;
     margin-top: 20px;
-    color: var(--fontcolor);
+    color: var(--fontcolordark);
     font-size: 17px;
     font-weight:600;
     transition: all 0.6s ease-in-out;
@@ -195,9 +199,10 @@ nav.sticky{
 
 .button:hover{
     transition: all 0.5s ease-in-out;
-    font-style: italic;
     scale: 1.02;
-    border:2px solid white;
+    background-color: var( --maindgreen);
+    border:2px solid var(--fontcolordark);
+  
 }
 .newsletter{
     height: 140vh;
@@ -208,7 +213,7 @@ nav.sticky{
     margin-top: 30px;
     font-size: 35px;
     font-weight:600; 
-    color:  var(--fontcolor);
+    color:  var(--fontcolordark);
     width: 95%;
 }
 .newscontainer{
@@ -223,11 +228,12 @@ nav.sticky{
     border:2px solid rgb(0, 0, 0);
     width: 300px;
     height: 450px;
-    background:var(--fontcolor);
+    background:var(--fontcolordark);
     display: flex;
     flex-direction: column;
     align-items: center;
     padding: 15px;
+    color: var(--fontcolor);
     margin-top: 40px;
     justify-content: flex-start;
     border-radius: 6px;
@@ -245,7 +251,7 @@ nav.sticky{
     width:270px;
     height:220px;
     border-radius: 5px;
-    border:1px solid var(--mainred);
+    border:1px solid var(--maingreen);
     background-color: var(--bg-black);
 }
 .imagecard img{
@@ -261,12 +267,11 @@ nav.sticky{
     justify-content: center;
     align-items: center;
     padding:7px 7px ;
-    border:1px solid white;
+    border:1px solid var(--bg-light);
     border-radius: 4px;
-    /* background: linear-gradient(0.25turn,var(--mainred), var(--mainblue)); */
-    background-color: var(--mainred);
+    background-color: var(--maingreen);
     width: 80px;
-    color: var(--fontcolor);
+    color: var(--fontcolordark);
     font-size: 15px;
     font-weight:600;
     margin-top: 10px;
@@ -274,9 +279,14 @@ nav.sticky{
     transition: all 0.6s ease-in-out;
     
 }
-
+.buttonsmall:hover{
+    transition: all 0.5s ease-in-out;
+    scale: 1.02;
+    background-color: var( --maindgreen);
+    border:2px solid var(--fontcolordark);
+}
 .buttonsmall a{
-    color: #fff;
+    color: var(--fontcolordark) ;
 
 }
 
@@ -562,3 +572,108 @@ footer{
     color: #fff;
     opacity: .7;
 }
+
+/* 
+desease card and routing 
+to other pages section
+ */
+.diseaseCardContainer{
+    background: #F4F3EE;
+    width: 100%;
+    height: 140vh;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content:flex-start;
+    margin-bottom: 20px;
+
+}
+.flex2{
+    margin-top: 50px;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+}
+
+.diseasecard{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    height:450px;
+   
+    width: 500px;
+    margin: 10px;
+    
+}
+.diseaseCardImage{
+    height:300px;
+    width:400px;
+    /* background: #f28888; */
+}
+.deseaseCardDescription{
+    font-size: 24px;
+    font-weight:600;
+
+}
+.buttonColour{
+    display: flex;
+    align-items: center;
+    padding:10px 15px ;
+    border:2px solid var(--fontcolordark);
+    border-radius: 4px;
+    max-width: 155px;
+    margin-top: 20px;
+    font-size: 17px;
+    font-weight:600;
+    
+    transition: all 0.6s ease-in-out;
+   
+}
+.buttonColour a{
+    color:var(--bg-light);
+}
+.buttonColour:hover a{
+    color:var(--maingreen);
+}
+
+.buttonColour:hover{
+    transition: all 0.5s ease-in-out;
+    scale: 1.02;
+    background-color: var( --bg-black);
+    border:2px solid var(--fontcolordark);
+  
+}
+.red{
+    background-color: var( --mainred);
+}
+.pink{
+    background-color: #41904F;
+}
+.purple{
+    background-color:#7353B0;
+}
+.brown{
+    background-color:#b08968;
+}
+.dividergradient{
+    width: 100%;
+    height:20px;
+    background: linear-gradient(-45deg, #7353B0, #e73c7e, #b08968, #41904F);
+    background-size: 300% 300%;
+    animation: gradient 10s ease infinite;
+    
+}
+
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+
