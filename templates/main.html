@@ -21,7 +21,7 @@
         <nav>
             <div class="navElemContainers flexlogo">
                 <img src="{{url_for('static',filename='../static/resources/heart.png')}}">
-                <div class="logo">Heart Static</div>
+                <div class="logo">MedAware</div>
             </div>
             <div class="navElemContainers middlenav">
                 <div class="navItem"><a href="{{url_for('main')}}">Home</a></div>
@@ -51,17 +51,60 @@
             </div>
             <div class="subcontainer">
                 <img class="homeimage"
-                    src="{{url_for('static',filename='../static/resources/Cardiologist-rafiki-2.svg')}}">
+                    src="{{url_for('static',filename='../static/resources/Blood test-cuate.svg')}}">
             </div>
         </div>
 
-        <br><br>
-        <div class="diseases">
-            <div class="button"><a href="{{url_for('heart')}}">Check Heart</a></div>
+        <div class="diseaseCardContainer">
+            <div class="headerlinesmall">Have a Deeper dive into our individual health checkup program</div>
+            <div class="flex2">
+                <div class="flex1">
+                    <div class="diseasecard ">
+                        <img class="diseaseCardImage" src="{{url_for('static',filename='../static/resources/Cardiologist-rafiki-2.svg')}}" alt="">
+                        <div class="deseaseCardDescription">Heart Condition Predictor</div>
+                        <div class="deseaseCardDetail">Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere nulla pariatur corporis dolorum quia excepturi rem quidem maiores harum neque.</div>
+                        <div class="diseases">
+                            <div class="buttonColour red"><a href="{{url_for('heart')}}">Check Heart</a></div>
+                        </div>
+                    </div>
+                    <div class="diseasecard ">
+                        <img class="diseaseCardImage" src="{{url_for('static',filename='../static/resources/Liver.svg')}}" alt="">
+                        <div class="deseaseCardDescription">Liver Condition analysis</div>
+                        <div class="deseaseCardDetail">Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere nulla pariatur corporis dolorum quia excepturi rem quidem maiores harum neque.</div>
+                        <div class="diseases">
+                            <div class="buttonColour brown"><a href="{{url_for('heart')}}">Check Heart</a></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="flex1">
+                    <div class="diseasecard ">
+                        <img class="diseaseCardImage" src="{{url_for('static',filename='../static/resources/Feaver.svg')}}" alt="">
+                        <div class="deseaseCardDescription">Covid Detector</div>
+                        <div class="deseaseCardDetail">Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere nulla pariatur corporis dolorum quia excepturi rem quidem maiores harum neque.</div>
+                        <div class="diseases">
+                            <div class="buttonColour pink"><a href="{{url_for('heart')}}">Check Heart</a></div>
+                        </div>
+                    </div>
+                    <div class="diseasecard ">
+                        <img class="diseaseCardImage" src="{{url_for('static',filename='../static/resources/Asd.svg')}}" alt="">
+                        <div class="deseaseCardDescription">ASD detector</div>
+                        <div class="deseaseCardDetail">Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere nulla pariatur corporis dolorum quia excepturi rem quidem maiores harum neque.</div>
+                        <div class="diseases">
+                            <div class="buttonColour purple"><a href="{{url_for('heart')}}">Check Heart</a></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+           
+            
         </div>
+        <div class="dividergradient">
+
+        </div>
+       
 
         <div class="newsletter" id="blog">
-            <div class="headerlinesmall">Checkout to read more about heart diseases.</div>
+            <div class="headerlinesmall">Medical Journals and Articles.</div>
             <div class="newscontainer">
 
                 <div class="newscardbig">
@@ -157,17 +200,11 @@
         </div>
         <footer>
             <div class="footer-content">
-              <h3>Heart Static</h3>
-              
-                  <li><a href=""></a><i class="fa fa-facebook"></i></li>
-                  <li><a href=""></a><i class="fa fa-twitter"></i></li>
-                  <li><a href=""></a><i class="fa fa-google"></i></li>
-                  <li><a href=""></a><i class="fa fa-youtube"></i></li>
-                  <li><a href=""></a><i class="fa fa-lnkedin"></i></li>
-                </ul>
+                <h3>MedAware.co</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur recusandae totam perferendis accusamus distinctio reiciendis accusantium beatae iure odio quisquam corporis deleniti tenetur ab ipsa, voluptatibus sint rerum laboriosam, ea ipsum voluptatum! Neque nisi sed fugit unde temporibus quod delectus.</p>
             </div>
             <div class="footer-bottom">
-              <p>copyright &copy;2023</p>
+              <p>copyright &copy;2023. designed by <span><a href="https://github.com/Gaurav07076">Gaurav, </a></span><span><a href="https://github.com/samyak269"> Samyak, </a></span><span><a href=https://github.com/VaishaliRajpal28>PRITHWI, </a ></span><span><a href=https://github.com/VaishaliRajpal28>SAHIL &</a ></span> <span><a href=https://github.com/VaishaliRajpal28>SHUBHAM</a ></span></p>
             </div>
         
         
