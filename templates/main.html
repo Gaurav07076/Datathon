@@ -35,16 +35,12 @@
         <div class="home">
             <div class="subcontainer text">
                 <div class="headerline">
-                    Get a heart check from our <span>MAGICAL</span> ML trained model.
+                    Check your symptoms and explore potential diseases through our <span>MAGICAL</span> ML trained model.
                 </div>
                 <div class="divider_thick"></div>
-                <div class="subtext">Welcome to our ML based model that could tell you whether your heart is still
-                    healthy or it might be on the verge of having a disease. Check out the predictor below by filling
-                    the given medical details of your body and find out the status of your heart.
-                    <br><br>Cardiovarscular diseases are increasing day by day and is now a very serious concern.
-                    Infact, the annual number of deaths from CardioVascular Disease in India is projected to rise from
-                    2.26million(1992) to 4.77million(2020) and a large part of the population are not privileged enough
-                    to get proper tests, hence a more affordable, scalable testing system needs to be developed.
+                <div class="subtext">Welcome to our advanced Disease Diagnosis Portal powered by Machine Learning (ML) trained models. Our cutting-edge technology harnesses the power of artificial intelligence to provide accurate and reliable disease predictions based on your symptoms. By inputting your symptoms into our intuitive interface, our ML models analyze the data and generate personalized results, helping you identify potential diseases and conditions.
+                    <br><br>
+                    Through our models,A user can detect any imbalance condition in his/her heart and liver. A user can also detect wheather he/she is having Covid19 and Diabetes. We also check some rear mental disease like ASD(Autsim Spectrum Disorder) which is not easily recongnized.
                     <br><br></div>
 
             </div>
@@ -60,7 +56,7 @@
                 <div class="diseasecard ">
                     <img class="diseaseCardImage" src="{{url_for('static',filename='../static/resources/Cardiologist-rafiki-2.svg')}}" alt="">
                     <div class="deseaseCardDescription">Heart Disease Predictor</div>
-                    <div class="deseaseCardDetail">Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere nulla pariatur corporis dolorum quia excepturi rem quidem maiores harum neque.</div>
+                    <div class="deseaseCardDetail">Welcome to our Heart Disease Predictor, a state-of-the-art tool designed to assess your risk of heart disease using advanced machine learning algorithms. By analyzing various factors and indicators, our predictor can provide valuable insights into your cardiovascular health.</div>
                     <div class="diseases">
                         <div class="buttonColour red"><a href="{{url_for('heart')}}">Check Heart</a></div>
                     </div>
@@ -69,7 +65,7 @@
                 <div class="diseasecard ">
                     <img class="diseaseCardImage" src="{{url_for('static',filename='../static/resources/Liver.svg')}}" alt="">
                     <div class="deseaseCardDescription">Liver Condition Checker</div>
-                    <div class="deseaseCardDetail">Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere nulla pariatur corporis dolorum quia excepturi rem quidem maiores harum neque.</div>
+                    <div class="deseaseCardDetail">Welcome to our Liver Condition Checker, a powerful tool designed to help you identify potential liver diseases and conditions using advanced machine learning algorithms. By analyzing a range of factors and indicators, our checker can provide valuable insights into your liver health.</div>
                     <div class="diseases">
                         <div class="buttonColour brown"><a href="{{url_for('liver')}}">Check Liver</a></div>
                     </div>
@@ -80,7 +76,7 @@
                 <div class="diseasecard ">
                     <img class="diseaseCardImage" src="{{url_for('static',filename='../static/resources/Feaver.svg')}}" alt="">
                     <div class="deseaseCardDescription">Covid Detector</div>
-                    <div class="deseaseCardDetail">Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere nulla pariatur corporis dolorum quia excepturi rem quidem maiores harum neque.</div>
+                    <div class="deseaseCardDetail">Welcome to our COVID Detector, an advanced tool leveraging machine learning technology to assist in identifying potential cases of COVID-19. Our detector analyzes various symptoms and risk factors associated with the virus to provide valuable insights into your COVID-19 status.</div>
                     <div class="diseases">
                         <div class="buttonColour pink"><a href="{{url_for('covid')}}">Check COVID</a></div>
                     </div>
@@ -89,7 +85,7 @@
                 <div class="diseasecard ">
                     <img class="diseaseCardImage" src="{{url_for('static',filename='../static/resources/Asd.svg')}}" alt="">
                     <div class="deseaseCardDescription">Autisum Spectrum Disorder</div>
-                    <div class="deseaseCardDetail">Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere nulla pariatur corporis dolorum quia excepturi rem quidem maiores harum neque.</div>
+                    <div class="deseaseCardDetail">Welcome to our Autism Spectrum Disorder (ASD) Detector, a powerful tool designed to assist in the early identification of potential ASD traits in individuals. Our detector utilizes advanced machine learning algorithms to analyze behavioral patterns and indicators associated with ASD, providing valuable insights for early intervention and support.</div>
                     <div class="diseases">
                         <div class="buttonColour purple"><a href="{{url_for('ASD')}}">Check ASD</a></div>
                     </div>
@@ -126,21 +122,20 @@
                     <div class="imagecard">
                         <img src="{{url_for('static',filename='../static/resources/Doctors-cuate.svg')}}">
                     </div>
-                    <div class="newstile">A brief about what is heart disease?, Risk Factors, cardiac rehabilation ...
+                    <div class="newstile">Here's how 10 popular diets scored for heart health...
                     </div>
                     <!-- <div class="newsdesc">subtext...</div> -->
-                    <div class="buttonsmall"><a href="https://www.cdc.gov/heartdisease/about.htm"
-                            target="_blank">Read</a></div>
+                    <div class="buttonsmall"><a href="https://www.heart.org/en/news/2023/04/27/heres-how-10-popular-diets-scored-for-heart-health"target="_blank">Read</a></div>
                 </div>
 
                 <div class="newscardsmall">
                     <div class="imagecard">
                         <img src="{{url_for('static',filename='../static/resources/Medicine-amico.svg')}}">
                     </div>
-                    <div class="newstilesmall">6 Surprising Facts About Heart Disease ...</div>
+                    <div class="newstilesmall">New Research Establishes How and Why Western Diets High in Sugar and Fat Cause Liver Disease...</div>
                     <!-- <div class="newsdesc">subtext...</div> -->
                     <div class="buttonsmall"><a
-                            href="https://www.nghs.com/2019/11/11/6-surprising-facts-about-heart-disease"
+                            href="https://www.sciencedaily.com/releases/2023/03/230315132445.htm"
                             target="_blank">Read</a></div>
                 </div>
 
@@ -148,10 +143,10 @@
                     <div class="imagecard">
                         <img src="{{url_for('static',filename='../static/resources/Doctors-pana.svg')}}">
                     </div>
-                    <div class="newstile">Types of heart diseases and causes ...</div>
+                    <div class="newstile">Risk of venous thromboembolism in non-respiratory and respiratory presentations of COVID-19 in critically ill patients....</div>
                     <!-- <div class="newsdesc">subtext...</div> -->
                     <div class="buttonsmall"><a
-                            href="https://www.google.com/url?sa=t&source=web&rct=j&url=https://www.heartandstroke.ca/heart-disease/what-is-heart-disease/types-of-heart-disease&ved=2ahUKEwjo4NiM5OX9AhWsTWwGHV11BzIQFnoECDEQAQ&usg=AOvVaw3g6KLghgUVWqcHZM6g8HLU"
+                            href="https://iars.org/covid-19-newsletter/"
                             target="_blank">Read</a></div>
                 </div>
 
@@ -159,10 +154,10 @@
                     <div class="imagecard">
                         <img src="{{url_for('static',filename='../static/resources/Medicine-bro.svg')}}">
                     </div>
-                    <div class="newstilesmall">Risk Factors involving Heart Diseases ... </div>
+                    <div class="newstilesmall">Prevent and Reverse Type 2 Diabetes With a Plant-Based Diet... </div>
                     <!-- <div class="newsdesc">subtext...</div> -->
                     <div class="buttonsmall"><a
-                            href="https://www.google.com/url?sa=t&source=web&rct=j&url=https://www.texasheart.org/heart-health/heart-information-center/topics/heart-disease-risk-factors/&ved=2ahUKEwjZ2djF3eX9AhX2wTgGHXkqDCwQFnoECBkQAQ&usg=AOvVaw3Vo0E-Dd3rW7mf7K3mB3oR"
+                            href="https://www.diet-health.info/en/100122/papers/6266/health/prevent-and-reverse-type-2-diabetes-with-a-plant-based-diet?gclid=CjwKCAjwx_eiBhBGEiwA15gLN_6i5nrMBJgC-F1B_4rk3VNF6YB0K6YE3sZ5oAvzf23EwFMjDwEfDRoCCO8QAvD_BwE"
                             target="_blank">Read</a></div>
                 </div>
             </div>
@@ -172,10 +167,10 @@
                     <div class="imagecard">
                         <img src="{{url_for('static',filename='../static/resources/Medicine-bro.svg')}}">
                     </div>
-                    <div class="newstilesmall">Burden of heart disease in India</div>
+                    <div class="newstilesmall">Discrimination linked to higher risk of death, particularly from cardiovascular disease...</div>
                     <!-- <div class="newsdesc">subtext...</div> -->
                     <div class="buttonsmall"><a
-                            href="https://www.ahajournals.org/doi/full/10.1161/CIRCULATIONAHA.114.008729"
+                            href="https://www.heart.org/en/news/2023/04/05/discrimination-linked-to-higher-risk-of-death-particularly-from-cardiovascular-disease"
                             target="_blank">Read</a></div>
                 </div>
 
@@ -183,10 +178,10 @@
                     <div class="imagecard">
                         <img src="{{url_for('static',filename='../static/resources/Doctors-pana.svg')}}">
                     </div>
-                    <div class="newstile">Which country has the healthiest heart and why so?... </div>
+                    <div class="newstile">Incurable Liver Disease May Prove Curable... </div>
                     <!-- <div class="newsdesc">subtext...</div> -->
                     <div class="buttonsmall"><a
-                            href="https://www.bbc.com/news/health-39292389#:~:text=The%20healthiest%20hearts%20in%20the,study%20in%20the%20Lancet%20showed"
+                            href="https://www.sciencedaily.com/releases/2023/01/230105083044.htm"
                             target="_blank">Read</a></div>
                 </div>
 
@@ -194,10 +189,10 @@
                     <div class="imagecard">
                         <img src="{{url_for('static',filename='../static/resources/Medicine-amico.svg')}}">
                     </div>
-                    <div class="newstilesmall">Prevention from heart diseases...</div>
+                    <div class="newstilesmall">What do India’s SMEs need as they recover from the pandemic?...</div>
                     <!-- <div class="newsdesc">subtext...</div> -->
                     <div class="buttonsmall"><a
-                            href="https://www.googleadservices.com/pagead/aclk?sa=L&ai=DChcSEwi-xdPz3uX9AhUVmWYCHeKjDLYYABAAGgJzbQ&ohost=www.google.com&cid=CAESaOD2ptp9MGNSGT2f17BG0HgrvpS0Cfz4RA4djv-8rtnMVa2ownraXqykzRibac6YZPARHrbepmVatq9As-E6T_AMS1ODtZkWXTbZ9UkZYUt6_gK8WJhZYNzLww-KsmrXhnwc5pET4mgv&sig=AOD64_02_b95sTmZIp9425R2Xq0uUynkiQ&q&adurl&ved=2ahUKEwj-jc3z3uX9AhUv03MBHVL_AXsQ0Qx6BAgHEAE"
+                            href="https://idronline.org/article/leadership-talent/what-do-indias-smes-need-as-they-recover-from-the-pandemic/"
                             target="_blank">Read</a></div>
                 </div>
 
@@ -205,9 +200,9 @@
                     <div class="imagecard">
                         <img src="{{url_for('static',filename='../static/resources/Doctors-cuate.svg')}}">
                     </div>
-                    <div class="newstile">BMC cardiovascular Disorders</div>
+                    <div class="newstile">Diabetic Ketoacidosis in Patients with Type 2 Diabetes...</div>
                     <!-- <div class="newsdesc">subtext...</div> -->
-                    <div class="buttonsmall"><a href="https://bmccardiovascdisord.biomedcentral.com/articles"
+                    <div class="buttonsmall"><a href="https://www.diabetesincontrol.com/diabetic-ketoacidosis-in-patients-with-type-2-diabetes/"
                             target="_blank">Read</a></div>
                 </div>
 
@@ -216,10 +211,10 @@
         <footer>
             <div class="footer-content">
                 <h3>MedAware.co</h3>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur recusandae totam perferendis accusamus distinctio reiciendis accusantium beatae iure odio quisquam corporis deleniti tenetur ab ipsa, voluptatibus sint rerum laboriosam, ea ipsum voluptatum! Neque nisi sed fugit unde temporibus quod delectus.</p>
+                <p>"Stay informed, stay ahead - let our disease check guide you through life's uncertain thread."</p>
             </div>
             <div class="footer-bottom">
-              <p>copyright &copy;2023. designed by <span><a href="https://github.com/Gaurav07076">Gaurav, </a></span><span><a href="https://github.com/samyak269"> Samyak, </a></span><span><a href=https://github.com/VaishaliRajpal28>PRITHWI, </a ></span><span><a href=https://github.com/VaishaliRajpal28>SAHIL &</a ></span> <span><a href=https://github.com/VaishaliRajpal28>SHUBHAM</a ></span></p>
+              <p>copyright &copy;2023. designed by <span><a href="https://github.com/Gaurav07076">Gaurav, </a></span><span><a href="https://github.com/samyak269"> Samyak, </a></span><span><a href="https: //github.com/The-Prithwiraj06">PRITHWI, </a ></span><span><a href="https://github.com/sahilkrRaj">SAHIL &</a ></span> <span><a href="https://github.com/ShubhamKumarSingh123">SHUBHAM</a ></span></p>
             </div>
         
         
