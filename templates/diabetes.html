@@ -33,93 +33,70 @@
     </nav>
 
     <div class="formcontainer" id="predict">
-        <div class="headerline">Liver Condition Detector</div>
+        <div class="headerline">Diabetes Checker</div>
         <div class="divider_thick up10 "></div>
 
-        <form action="{{ url_for('predictPage_liver') }}" method="POST">
+        <form action="{{ url_for('predictPage_diabetes') }}" method="POST">
 
 
             <div class="form_main_subcontainer">
                 <div class="formsubcontainer">
 
                     <div class="seperator">
-                        <label for="age">Age</label>
-                        <input type="text" id="age" name="age" placeholder="Your age..">
+                        <label for="No. of Pregnancies">No. of Pregnancies</label>
+                        <input type="text" id="No. of Pregnancies" name="No. of Pregnancies" placeholder="Your age..">
                     </div>
-                    <p class="headDescription">Age of the patient</p>
+                    <p class="headDescription">No. of Pregnancies</p>
                     <div class="formseperator"></div>
 
                     <div class="seperator">
-                        <label for="gender">Gender</label>
-                        <select id="sex" name="sex">
-                            <option selected>----select option----</option>
-                            <option value="1">Male</option>
-                            <option value="0">Female</option>
-                        </select>
+                        <label for="Gender">Glucose</label>
+                        <input type="text" id="Glucose" name="Glucose" placeholder="Glucose">
                     </div>
-                    <p class="headDescription">Gender of the patient </p>
+                    
                     <div class="formseperator"></div>
 
                     <div class="labelspacing">
-                        <label for="tb">Total Bilirubin</label>
-                        <input type="text" name="Total_Bilirubin" placeholder="Total Bilirubin">
+                        <label for="bp">Blood Pressure</label>
+                        <input type="text" name="bp" placeholder="Blood Pressure">
                     </div>
-                    <p class="headDescription">Total Bilirubin : Blood test that measures the amount of a substance called bilirubin</p>
+                    <p class="headDescription">Blood Pressure</p>
                     <div class="formseperator"></div>
 
                     <div class="labelspacing">
-                        <label for="db">Direct Bilirubin</label>
-                        <input type="text" name="Direct_Bilirubin" placeholder="Direct Bilirubin">
+                        <label for="st">Skin Thickness</label>
+                        <input type="text" name="Skin Thickness" placeholder="Skin Thickness">
                     </div>
-                    <p class="headDescription">Direct Bilirubin : Normally measured in blood Test</p>
+                    
                     <div class="formseperator"></div>
 
                     <div class="seperator">
-                        <label for="ap">Alkaline Phosphotase</label>
-                        <input type="text" name="Alkaline_Phosphotase" placeholder="Alkaline Phosphotase">
+                        <label for="i">Insulin</label>
+                        <input type="text" name="Insulin" placeholder="Insulin">
                     </div>
-                    <p class="headDescription">Alkaline Phosphotase : Alkaline phosphatase is an enzyme that's found throughout your body found in normal blood test</p>
-                <div class="formseperator"></div>
+                    
+                    <div class="formseperator"></div>
                 </div>
                 <div class="formsubcontainer">
                     <div class="seperator">
-                        <label for="aa">Alamine Aminotransferase</label>
-                        <input type="text" name="Alamine_Aminotransferase" placeholder="Alamine Aminotransferase">
+                        <label for="bmi">BMI</label>
+                        <input type="text" name="bmi" placeholder="Body to mass ratio">
                     </div>
-                    <p class="headDescription">Alamine Aminotransferase : Enzyme that's mainly found in your liver, though it exists in other parts of your body</p>
+                    <p class="headDescription">Ratio of height by weight squares</p>
                     <div class="formseperator"></div>
 
                     <div class="labelspacing">
-                        <label for="asa">Aspartate_Aminotransferase</label>
-                        <input type="text" name="Aspartate_Aminotransferase" placeholder="Aspartate Aminotransferase">
+                        <label for="asa">DiabetesPedigreeFunction</label>
+                        <input type="text" name="DiabetesPedigreeFunction" placeholder="DiabetesPedigreeFunction">
                     </div>
-                    <p class="headDescription">Aspartate Aminotransferase : Also an enzyme found in mostly in liver, but also in muscles and other organs </p>
-                    <div class="formseperator"></div>
-                    
-                    <div class="labelspacing">
-                        <label for="tp">Total proteins</br>
-                            <input type="text" name="Total_Protiens" placeholder="Total Protiens">
-                    </div>
-                    <p class="headDescription">Total Assimilation Protiens</p>
-                    <div class="formseperator"></div>
-
-
-                    <div class="seperator">
-                        <label for="albumin">Albumin</label>
-                        <input type="text" name="Albumin" placeholder="Albumin">
-                    </div>
-                    <p class="headDescription">Albumin : Albumin is a protein made by your liver. Checked in blood</p>
+                    <p class="headDescription">A function that determines the risk of type 2 diabetes based on family history, the larger the function, the higher the risk of type 2 diabetes.</p>
                     <div class="formseperator"></div>
 
                     <div class="labelspacing">
-                        <label for="agr">Albumin and Globulin Ratio</label>
-                        <input type="text" name="Albumin_and_Globulin_Ratio" placeholder="Albumin and Globulin Ratio">
+                        <label for="age">Age</br>
+                            <input type="text" name="age" placeholder="age">
                     </div>
-                    <p class="headDescription">Albumin and Globulin Ratio : Both are protein. The normal range for albumin/globulin ratio is usually around 1 to 2</p>
                     <div class="formseperator"></div>
-
-
-
 
 
                 </div>
