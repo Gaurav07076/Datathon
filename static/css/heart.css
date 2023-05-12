@@ -216,7 +216,6 @@ nav.sticky{
 
 
 .formcontainer{
-     height: 170vh;
      padding-left: 70px;
      margin-top: 200px;
 }
@@ -245,7 +244,7 @@ form{
 }
 .formseperator{
     width: 250px;
-    height: 1px;
+    height: 2px;
     background:var(--mainred);
     margin: 5px 0 20px 0;
 
@@ -377,4 +376,9 @@ footer{
 .headDescription ol div{
     font-size:15px;
     font-weight: 400;
+}
+
+.red{
+    background-color: var(--mainred) !important;
+    color: var(--bg-light) !important;
 }

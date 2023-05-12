@@ -5,7 +5,7 @@
     --maindgreen:#40a879;
     --maingreen:#50CB93;
     --bg-black: #232b2b;
-
+    
     --bg-light :#DCE1DE;
     --fontcolor:rgb(240, 239, 238);
     --fontcolordark: #1F2421;
@@ -254,7 +254,6 @@ select{
 footer{
     margin-top: 70px;
     background:#111;
-    height:auto;
     width:100vw;
     font-family: "";
     padding-top:20px;  
@@ -273,8 +272,7 @@ footer{
 .footer-content h3{
     font-size: 22px;
     font-weight:400;
-    color:  var(--bg-light);
-    
+    color:var(--bg-light);
 }
 
 .footer-content p{
@@ -342,4 +340,8 @@ footer{
 .headDescription ol div{
     font-size:15px;
     font-weight: 400;
+}
+.green{
+    background-color: var(--maingreen) !important;
+    color: var(--bg-light) !important;
 }
