@@ -27,7 +27,7 @@
 
     </div>
     <div class="navElemContainers">
-      <div class="button"><a href="{{url_for('logout')}}">Log Out</a></div>
+      <div class="button purple"><a href="{{url_for('logout')}}">Log Out</a></div>
     </div>
   </nav>
   <div class="formcontainer" id="predict">
@@ -117,14 +117,7 @@
           <option value="0">No</option>
         </select>
       </div>
-      <div class="labelspacing">
-        <label for="gender">Gender</label>
-        <select id="gender" name="gender">
-          <option selected>----select option----</option>
-          <option value="1">Male</option>
-          <option value="0">Female</option>
-        </select>
-      </div>
+      <label for="">gender</label><br><input type="text" name="Age" placeholder="Age">
 
       
 
@@ -137,16 +130,14 @@
         </select>
       </div>
       <div class="labelspacing">
-        <label for="austim">Austim:</label>
+        <label for="austim">Family member with ASD:</label>
         <select id="austim" name="austim">
           <option selected>----select option----</option>
           <option value="1">Yes</option>
           <option value="0">No</option>
         </select>
       </div>
-      
-      
-      <input type="submit" value="Predict">
+      <input type="submit" class="btn btn-info btn-block button purple" value="Predict">
     </form>
   </div>
 </div>
