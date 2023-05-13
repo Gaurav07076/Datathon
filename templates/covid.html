@@ -36,7 +36,7 @@
             image: base64Image
         }
         console.log(message);
-        $.post("/predict", JSON.stringify(message), function(response){
+        $.post("/predict_covid", JSON.stringify(message), function(response){
             $("#result").text(response.prediction.result);
             $("#probability").text(response.prediction.accuracy.toFixed(2));
             console.log(response);

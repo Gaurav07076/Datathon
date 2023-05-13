@@ -22,6 +22,9 @@ liver_model = pickle.load(open('model/liver_model.pkl','rb'))
 asd_model = pickle.load(open('model/asd_model.pkl','rb'))
 diabetes_model = pickle.load(open('model/diabetes_model.pkl','rb'))
 
+values = np.array([0.0, 120.0, 62.0, 35.0, 0.0, 33.6, 0.127, 6.8]).reshape(1, -1)
+print(diabetes_model.predict((values)))
+
 label_dict={0:'Covid19 Negative', 1:'Covid19 Positive'}
 img_size = 100
 class User(db.Model):
@@ -160,7 +163,9 @@ def predictPage_diabetes():
         if request.method == 'POST':
             to_predict_dict = request.form.to_dict()
             to_predict_list = list(map(float, list(to_predict_dict.values())))
+            print(to_predict_list)
             pred = predict(diabetes_model,to_predict_list, to_predict_dict)
+            print(pred)
     except:
         message = "Please enter valid Data"
         return render_template("diabetes.html", message = message)
