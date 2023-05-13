@@ -164,7 +164,7 @@ nav.sticky{
     height:10px;
     border:0.5px solid white;
     border-radius: 4px;
-    background: linear-gradient(0.25turn,var(--mainred), var(--mainblue));
+    background: linear-gradient(0.25turn,#7353B0, var(--maingreen));
     animation: pulse 5s infinite;
     animation-timing-function: ease-out; 
     animation-delay: 0s;
@@ -186,9 +186,9 @@ nav.sticky{
 .button{
     display: flex;
     align-items: center;
-    
+    border:1px solid white;
     padding:10px 15px ;
-    border:1px solid var(--fontcolordark);
+    
     border-radius: 4px;
     /* background: linear-gradient(0.25turn,var(--mainred), var(--mainblue)); */
     background-color: var(--mainred);
@@ -203,7 +203,6 @@ nav.sticky{
 
 .button:hover{
     transition: all 0.5s ease-in-out;
-    font-style: italic;
     scale: 1.02;
     border:2px solid white;
 }
@@ -286,16 +285,7 @@ select{
     justify-content: flex-start;
 } 
 
-footer{
-    margin-top: 70px;
-    background:#111;
-    height:auto;
-    width:100vw;
-    font-family: "";
-    padding-top:20px;  
-    color:#fff;
-    
-}
+
 .footer-content{
     display:flex;
     align-items:center;
@@ -342,8 +332,21 @@ footer{
 .socials a:hover i{
     color:aqua;
 }
+footer{
+    position: relative;
+    margin-top: 70px;
+    background:#111;
+    height:400px;
+    width:100vw;
+    font-family: "";
+    padding-top:20px;  
+    color:#fff;
+    
+}
 .footer-bottom{
     background: #000;
+    position: absolute;
+    bottom: 0;
     width: 100vw;
     padding: 20px 0;
     text-align: center;
@@ -382,4 +385,8 @@ footer{
 .purple{
     background-color:var(--mainpurple) !important;
     color: var(--bg-light) !important;
+}
+.flex{
+    display: flex;
+    align-items: center;
 }

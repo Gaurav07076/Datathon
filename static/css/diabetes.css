@@ -164,7 +164,7 @@ nav.sticky{
     height:10px;
     border:0.5px solid white;
     border-radius: 4px;
-    background: linear-gradient(0.25turn,var(--mainred), var(--mainblue));
+    background: linear-gradient(0.25turn,#0768b7, var(--maindgreen));
     animation: pulse 5s infinite;
     animation-timing-function: ease-out; 
     animation-delay: 0s;
@@ -203,7 +203,7 @@ nav.sticky{
 
 .button:hover{
     transition: all 0.5s ease-in-out;
-    font-style: italic;
+    
     scale: 1.02;
     border:2px solid white;
 }
@@ -287,14 +287,23 @@ select{
 } 
 
 footer{
+    position: relative;
     margin-top: 70px;
     background:#111;
-    height:auto;
+    height:400px;
     width:100vw;
     font-family: "";
     padding-top:20px;  
     color:#fff;
     
+}
+.footer-bottom{
+    background: #000;
+    position: absolute;
+    bottom: 0;
+    width: 100vw;
+    padding: 20px 0;
+    text-align: center;
 }
 .footer-content{
     display:flex;
@@ -342,12 +351,7 @@ footer{
 .socials a:hover i{
     color:aqua;
 }
-.footer-bottom{
-    background: #000;
-    width: 100vw;
-    padding: 20px 0;
-    text-align: center;
-}
+
 
 .footer-bottom p{
     font-size:14px;
