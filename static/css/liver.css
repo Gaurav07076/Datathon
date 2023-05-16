@@ -289,14 +289,16 @@ footer{
     position: relative;
     margin-top: 70px;
     background:#111;
-    height:400px;
+    height:300px;
     width:100vw;
     font-family: "";
     padding-top:20px;  
     color:#fff;
+
     
 }
 .footer-bottom{
+    
     background: #000;
     position: absolute;
     bottom: 0;
@@ -305,6 +307,7 @@ footer{
     text-align: center;
 }
 .footer-content{
+    margin-top: 30px;
     display:flex;
     align-items:center;
     justify-content: center;
@@ -322,7 +325,7 @@ footer{
 
 .footer-content p{
     max-width: 500px;
-    margin: 10px auto;
+    margin: 20px auto;
     line-height: 28px;
     font-size:14px;
 
