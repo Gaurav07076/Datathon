@@ -103,8 +103,8 @@ nav.sticky{
     transition: 0.5s;
 
 }
-.navItem:hover{
-    color: var(--bg-black); 
+.navItem:hover a{
+    color: var(--maindgreen);
     font-weight: 700;
     
 }
@@ -653,7 +653,7 @@ to other pages section
 .red{
     background-color: var( --mainred);
 }
-.pink{
+.cgreen{
     background-color: #41904F;
 }
 .purple{

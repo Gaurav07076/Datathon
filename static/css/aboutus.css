@@ -78,13 +78,15 @@ nav.sticky{
     font-style: italic;
     color:  var(--maingreen);
 }
-
+.navItem a{
+    color: var(--bg-light);
+}
 .navItem{
     cursor: pointer;
     position: relative;
     text-decoration: none;
     font-family: 'Popins',sans-serif;
-    color: #a0a0a0;
+    
     font-size: 18px;
     letter-spacing:0.5px;
 }
@@ -99,12 +101,12 @@ nav.sticky{
     transition: 0.5s;
 
 }
-.navItem:hover{
-    color: var(--bg-black); 
+
+.navItem:hover a{
+    color: var(--maindgreen);
     font-weight: 700;
     
 }
-
 .navItem:hover:after{
     width: 100%;
     transition: 0.5s;

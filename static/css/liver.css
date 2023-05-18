@@ -94,9 +94,10 @@ nav.sticky{
     letter-spacing:0.5px;
 }
 .navItem:after{
+    transition: all 0.2s ease-in-out;
     content: " ";
     position:absolute;
-    background-color: var(--mainred);
+    background-color: var(--mainbrown);
     height: 3px;
     width: 0;
     left:0;
@@ -104,9 +105,12 @@ nav.sticky{
     transition: 0.5s;
 
 }
+
 .navItem:hover a{
-    color: var(--bg-black); 
-    font-weight: 700;
+    transition: all 0.9s ease-in-out;
+    font-weight: 200;
+    color: #d3d2d2;
+   
     
 }
 
@@ -183,12 +187,15 @@ nav.sticky{
      width: 100px;
     }
 }
+.navElemContainers{
+    display:flex;
+}
 .button{
     display: flex;
     align-items: center;
-    
+    margin: 0 10px;
     padding:10px 15px ;
-    border:1px solid var(--fontcolordark);
+    
     border-radius: 4px;
     /* background: linear-gradient(0.25turn,var(--mainred), var(--mainblue)); */
     background-color: var(--mainred);
@@ -202,10 +209,9 @@ nav.sticky{
 }
 
 .button:hover{
-    transition: all 0.5s ease-in-out;
-    font-style: italic;
+    transition: all 0.8s ease-in-out;
     scale: 1.02;
-    border:2px solid white;
+    border:2.4px solid var(--fontcolordark);
 }
 
 
@@ -384,8 +390,39 @@ footer{
     font-size:15px;
     font-weight: 400;
 }
-
+.buttonColour{
+    display: flex;
+    align-items: center;
+    padding:10px 15px ;
+    border:2px solid var(--fontcolordark);
+    border-radius: 4px;
+    max-width: 250px;
+    margin-top: 20px;
+    margin-left: 20px;
+    font-size: 17px;
+    font-weight:600;
+    transition: all 0.6s ease-in-out;
+    z-index: 1;
+   
+}
+.buttonColour {
+    color:var(--bg-light);
+}
+.buttonColour a{
+    color:var(--bg-light);
+}
+.buttonColour:hover a{
+    color:var(--maingreen);
+}
+.buttonColour:hover{
+    color:var(--maingreen);
+    transition: all 0.5s ease-in-out;
+    scale: 1.02;
+    background-color: var(--bg-black);
+    border:2px solid var(--fontcolordark);
+  
+}
 .brown{
-    background-color: var(--mainbrown) !important;
-    color: var(--bg-light) !important;
+    background-color: var(--mainbrown) ;
+    color: var(--bg-light);
 }

@@ -1,6 +1,7 @@
 
 :root{
     --mainred: #DA1212;
+    --mainDred:#9e0101;
     --mainblue: #041562; 
     --maindgreen:#40a879;
     --maingreen:#50CB93;
@@ -62,7 +63,7 @@ nav{
     top:0;
     left:0;
     width: 100%;
-    transition: 0.6s;
+    transition: 0.9s;
     padding: 40px 100px;  
     z-index :69;
 }
@@ -94,6 +95,7 @@ nav.sticky{
     letter-spacing:0.5px;
 }
 .navItem:after{
+    transition: all 0.2s ease-in-out;
     content: " ";
     position:absolute;
     background-color: var(--mainred);
@@ -101,19 +103,21 @@ nav.sticky{
     width: 0;
     left:0;
     bottom: -10px;
-    transition: 0.5s;
+    transition: 0.9s;
 
 }
 .navItem:hover a{
-    color: var(--bg-black); 
-    font-weight: 700;
+    transition: all 0.9s ease-in-out;
+    font-weight: 200;
+    color: #d3d2d2;
+   
     
 }
 
 
 .navItem:hover:after{
     width: 100%;
-    transition: 0.5s;
+    transition: 0.9s;
 
 }
 .home{
@@ -183,10 +187,13 @@ nav.sticky{
      width: 100px;
     }
 }
+.navElemContainers{
+    display:flex;
+}
 .button{
     display: flex;
     align-items: center;
-    
+    margin: 0 10px;
     padding:10px 15px ;
     border:1px solid var(--fontcolordark);
     border-radius: 4px;
@@ -380,8 +387,40 @@ footer{
     font-size:15px;
     font-weight: 400;
 }
-
+.buttonColour{
+    display: flex;
+    align-items: center;
+    padding:10px 15px ;
+    border:2px solid var(--fontcolordark);
+    border-radius: 4px;
+    max-width: 250px;
+    margin-top: 20px;
+    margin-right: 20px;
+    font-size: 17px;
+    font-weight:600;
+    
+    transition: all 0.6s ease-in-out;
+    z-index: 1;
+   
+}
+.buttonColour {
+    color:var(--bg-light);
+}
+.buttonColour a{
+    color:var(--bg-light);
+}
+.buttonColour:hover a{
+    color:var(--maingreen);
+}
+.buttonColour:hover{
+    color:var(--maingreen);
+    transition: all 0.5s ease-in-out;
+    scale: 1.02;
+    background-color: var(--bg-black);
+    border:2px solid var(--fontcolordark);
+  
+}
 .red{
-    background-color: var(--mainred) !important;
-    color: var(--bg-light) !important;
+    background-color: var(--mainred) ;
+    color: var(--bg-light) ;
 }

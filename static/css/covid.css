@@ -5,6 +5,7 @@
     --maindgreen:#40a879;
     --maingreen:#50CB93;
     --bg-black: #232b2b;
+    --covidgreen: #41904F;
     
     --bg-light :#DCE1DE;
     --fontcolor:rgb(240, 239, 238);
@@ -18,7 +19,7 @@
 }
 body{
     background-color: var(--bg-light);
-    height: 180vh;
+    
     display: flex;
     flex-direction: column;
 }
@@ -44,6 +45,9 @@ a:hover{
     width:50px;
     height: 50px; 
     margin-right: 90px;
+}
+.navElemContainers{
+    display: flex;
 }
 .flexlogo{
     display:flex;
@@ -85,6 +89,7 @@ nav.sticky{
 
 
 .navItem{
+
     cursor: pointer;
     position: relative;
     text-decoration: none;
@@ -93,10 +98,12 @@ nav.sticky{
     font-size: 18px;
     letter-spacing:0.5px;
 }
+
 .navItem:after{
+    transition: all 0.2s ease-in-out;
     content: " ";
     position:absolute;
-    background-color: var(--mainred);
+    background-color: var(--covidgreen);
     height: 3px;
     width: 0;
     left:0;
@@ -104,9 +111,12 @@ nav.sticky{
     transition: 0.5s;
 
 }
+
 .navItem:hover a{
-    color: var(--bg-black); 
-    font-weight: 700;
+    transition: all 0.9s ease-in-out;
+    font-weight: 200;
+    color: #d3d2d2;
+   
     
 }
 
@@ -140,7 +150,7 @@ nav.sticky{
 .headerline > span:nth-child(1){
     font-style: italic;
     text-shadow: 2px 2px 70px #4b4d4d;
-    background: -webkit-linear-gradient(0.30turn,var(--mainred), #c04848);
+    background: -webkit-linear-gradient(0.30turn,var(--covidgreen), #c04848);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
@@ -164,7 +174,7 @@ nav.sticky{
     height:10px;
     border:0.5px solid white;
     border-radius: 4px;
-    background: linear-gradient(0.25turn,var(--mainred), var(--mainblue));
+    background: linear-gradient(0.25turn,var(--covidgreen), var(--mainblue));
     animation: pulse 5s infinite;
     animation-timing-function: ease-out; 
     animation-delay: 0s;
@@ -186,12 +196,29 @@ nav.sticky{
 .button{
     display: flex;
     align-items: center;
-    
+    margin: 0 20px;
     padding:10px 15px ;
-    border:1px solid var(--fontcolordark);
+   border: none;
     border-radius: 4px;
     /* background: linear-gradient(0.25turn,var(--mainred), var(--mainblue)); */
-    background-color: var(--mainred);
+    background-color: var(--covidgreen);
+    max-width: 155px;
+    margin-top: 20px;
+    color: var(--fontcolordark);
+    font-size: 17px;
+    font-weight:600;
+    transition: all 0.6s ease-in-out;
+   
+}
+.buttonpred{
+    display: flex;
+    align-items: center;
+    margin: 20px 0;
+    padding:10px 15px ;
+   border: none;
+    border-radius: 4px;
+    /* background: linear-gradient(0.25turn,var(--mainred), var(--mainblue)); */
+    background-color: var(--covidgreen);;
     max-width: 155px;
     margin-top: 20px;
     color: var(--fontcolordark);
@@ -202,10 +229,10 @@ nav.sticky{
 }
 
 .button:hover{
+    background-color: #196c29;
     transition: all 0.5s ease-in-out;
-    font-style: italic;
-    scale: 1.02;
-    border:2px solid white;
+    scale: 1.04;
+    border:2.5px solid var(--fontcolor);
 }
 
 
@@ -214,13 +241,76 @@ nav.sticky{
 
 }
 
+.selectimg{
+    width: 300px;
+    height: 300px;
+    margin: 20px 0;
+    border: 2.5px solid var(--covidgreen);;
+    display: flex;
+    border-radius: 4px;
+    align-items: center;
+    justify-content: center;
+}
 
 .formcontainer{
     
      padding-left: 70px;
      margin-top: 200px;
+     display: flex;
+     flex-direction:column;
 }
+.flex1{
+    display: flex;
+    justify-content:flex-start;
+    align-items:flex-start;
+    flex-direction:column;
+    margin: 1px;
+}
+.predbox{
+    display: flex; 
+    width: 700px;
+}
+.formimage{
+   width: 300px;
+   height: 300px;
+}
+.flex1 div{
+    margin-left: 30px;
+    margin-bottom: 40px;
+    display: flex;
+    font-size:30px;
+    display: flex;
+    flex-direction: column;
+    font-style: italic;
+    font-weight: 800;
+    color: var(--fontcolordark);
+}
+.divider{
+    margin: 0 50px;
+    width: 2px;
+    height: 440px;
+    background: var(--fontcolordark);
+}
+.boxresult{
+    display: flex;
+    align-items:center;
+    justify-content: center;
+    margin-top: -10px;
+    margin-left: 30px;
+    margin-bottom: 40px;
+    width: 300px;
+    height:60px;
+    border-radius: 4px;
+    border: 3px solid var(--covidgreen);
+    font-size:30px;
+    font-weight: 400;
+    color: var(--fontcolordark);
+}
+.flex2{
+    margin:70px 0;
+    display: flex;
 
+}
 input{  
     width: 250px;
     padding: 7px;
@@ -244,7 +334,7 @@ select{
 }
 
 .verticalline{
-    border-left: 1.5px solid var(--mainred);
+    border-left: 1.5px solid var(--covidgreen);
     padding-left: 20px;
     display: flex;
     flex-direction: column;
@@ -348,7 +438,42 @@ footer{
     font-size:15px;
     font-weight: 400;
 }
+.buttonColour {
+    display: flex;
+    align-items: center;
+    padding:10px 15px ;
+    border:2px solid var(--fontcolordark);
+    border-radius: 4px;
+    max-width: 250px;
+    margin-top: 20px;
+    margin-right: 20px;
+    font-size: 17px;
+    font-weight:600;
+  
+    transition: all 0.6s ease-in-out;
+    z-index: 1;
+   
+}
+
+.buttonColour a{
+    color:var(--bg-light);
+}
+.buttonColour:hover a{
+    color:var(--maingreen);
+}
+
+.buttonColour:hover {
+   
+    transition: all 0.5s ease-in-out;
+    scale: 1.02;
+    background-color: var( --bg-black);
+    border:2px solid var(--fontcolordark);
+  
+}
 .green{
     background-color: var(--maingreen) !important;
     color: var(--bg-light) !important;
+}
+.cgreen{
+    background-color: var(--covidgreen);
 }

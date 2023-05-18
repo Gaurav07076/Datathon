@@ -5,7 +5,7 @@
     --maindgreen:#40a879;
     --maingreen:#50CB93;
     --bg-black: #232b2b;
-    --mainblue:#0768b7;
+    --dibblue:#0768b7;
     --bg-light :#DCE1DE;
     --fontcolor:rgb(240, 239, 238);
     --fontcolordark: #1F2421;
@@ -94,9 +94,10 @@ nav.sticky{
     letter-spacing:0.5px;
 }
 .navItem:after{
+    transition: all 0.2s ease-in-out;
     content: " ";
     position:absolute;
-    background-color: var(--mainred);
+    background-color: var(--dibblue);
     height: 3px;
     width: 0;
     left:0;
@@ -104,12 +105,14 @@ nav.sticky{
     transition: 0.5s;
 
 }
+
 .navItem:hover a{
-    color: var(--bg-black); 
-    font-weight: 700;
+    transition: all 0.9s ease-in-out;
+    font-weight: 200;
+    color: #d3d2d2;
+   
     
 }
-
 
 .navItem:hover:after{
     width: 100%;
@@ -186,12 +189,10 @@ nav.sticky{
 .button{
     display: flex;
     align-items: center;
-    
     padding:10px 15px ;
-    border:1px solid var(--fontcolordark);
     border-radius: 4px;
     /* background: linear-gradient(0.25turn,var(--mainred), var(--mainblue)); */
-    background-color: var(--mainred);
+    background-color: var(--dibblue);
     max-width: 155px;
     margin-top: 20px;
     color: var(--fontcolordark);
@@ -202,10 +203,9 @@ nav.sticky{
 }
 
 .button:hover{
-    transition: all 0.5s ease-in-out;
-    
-    scale: 1.02;
-    border:2px solid white;
+    transition: all 0.7s ease-in-out;
+    scale: 1.03;
+    border:2px solid var(--bg-black);
 }
 
 
@@ -382,8 +382,39 @@ footer{
     font-size:15px;
     font-weight: 400;
 }
-
+.buttonColour{
+    display: flex;
+    align-items: center;
+    padding:10px 15px ;
+    border:2px solid var(--fontcolordark);
+    border-radius: 4px;
+    max-width: 250px;
+    margin-top: 20px;
+    font-size: 17px;
+    font-weight:600;
+    
+    transition: all 0.6s ease-in-out;
+    z-index: 1;
+   
+}
+.buttonColour {
+    color:var(--bg-light);
+}
+.buttonColour a{
+    color:var(--bg-light);
+}
+.buttonColour:hover a{
+    color:var(--maingreen);
+}
+.buttonColour:hover{
+    color:var(--maingreen);
+    transition: all 0.5s ease-in-out;
+    scale: 1.02;
+    background-color: var( --bg-black);
+    border:2px solid var(--fontcolordark);
+  
+}
 .blue{
-    background-color: var(--mainblue) !important;
-    color: var(--bg-light) !important;
+    background-color: var(--dibblue) ;
+    color: var(--bg-light); 
 }
